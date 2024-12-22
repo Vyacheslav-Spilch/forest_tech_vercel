@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ServiceCard } from '../ServiceCard/ServiceCard'
 import { serviceList } from '../store/servicesList'
 import s from './style.module.css'
 
 export const ServiceCardList = () => {
-    const [ services ] = useState(serviceList)
+    const [ services ] = React.useState(serviceList)
     
 
     return (

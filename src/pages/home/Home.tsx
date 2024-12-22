@@ -1,7 +1,6 @@
 import s from './style.module.css'
 import './../../../global.css'
 import homeImage from './../../assets/home_image2.webp'
-import { ScrollToTop } from '../../utils/ScrollToTop'
 export  const Home = () => {
 
     

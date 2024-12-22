@@ -12,23 +12,6 @@ interface ReviewsInfoPanelProps {
 
 export const ReviewsInfoPanel: FC<ReviewsInfoPanelProps> = ({ amountReviews, generalRating, handleOpen }) => {
 
-    {/* <Rating className={s.rating} sx={{ 
-                            // fontSize: '27px', 
-                            color: '#ffbf00',
-                            '@media (max-width: 900px)': {
-                                fontSize: '26px'
-                            },
-                            '@media (max-width: 700px)': {
-                                fontSize: '23px'
-                            }
-                        }} 
-                        name="read-only" 
-                        precision={0.5} 
-                        value={Number(generalRating)} 
-                        readOnly 
-                    /> */}
-
-
     return (
         <div className={s.container_info}>
                 <div className={s.container_counter_reviews}>

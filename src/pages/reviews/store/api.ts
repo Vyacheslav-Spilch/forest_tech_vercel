@@ -1,5 +1,5 @@
-import axios, { AxiosResponse } from "axios"
-import { IReview, ReviewForm } from "./types"
+import axios from "axios"
+import { ReviewForm } from "./types"
 
 
 
