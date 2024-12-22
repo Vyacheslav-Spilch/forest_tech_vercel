@@ -1,0 +1,297 @@
+.container {
+    width: 100%;
+    min-height: 180vh;
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: #171616; */
+    background: -webkit-linear-gradient(125deg, #000000,#1a1919,#2f2d2e,#1d1c1c,#000000);
+    background: linear-gradient(125deg, #000000,#1a1919,#2f2d2e,#1d1c1c,#000000);
+    position: relative;
+}
+.container_header {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    width: 90%;
+    height: 70px;
+    margin: 60px 0 60px;
+    border-left: 5px solid #08603c;
+    animation-name: showBorder;
+    animation-delay: 0.4s;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.container_header h3 {
+    font-size: 35px;
+    color: #fff;
+    animation-name: showTitle;
+    animation-delay: 0.1s;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+.wrapper {
+    width: 90%;
+    height: 450px;
+    display: flex;
+}
+
+.contacts_container {
+    width: 50%;
+    height: 100%;
+}
+
+.box_contact, .box_social {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    text-align: left;
+}
+.box_contact h5 {
+    color: #08603c;
+    font-size: 19px;
+    font-weight: 500;
+}
+.box_contact span, a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+}
+.box_social {
+    height: 25%;
+}
+.box_social h5 {
+    font-size: 24px;
+    color: #fff;
+}
+.box_messangers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.map_container {
+    position: relative; 
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+}
+.box_iframe {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.box_messangers a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #ffffff1f;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    transition: color 0.5s ease;
+    font-size: 26px;
+}
+.box_messangers .telegram {
+    margin-right: 15px;
+}
+
+@keyframes showTitle {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes showBorder {
+    0% {
+        border-left: 5px solid #08603b00;
+    }
+    100% {
+        border-left: 5px solid #08603c;
+    }
+}
+
+
+
+@media (max-width: 1100px) {
+    .wrapper {
+        width: 95%;
+        justify-content: space-around;
+    }
+    .map_container {
+        width: 47%;
+        height: 70%;
+    }
+    .box_social h5 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .box_messangers a {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 800px) {
+    .container_header {
+        width: 90%;
+        height: 50px;
+        margin: 40px 0 40px;
+    }
+    .container_header h3 {
+        font-size: 32px;
+    }
+    .wrapper {
+        width: 95%;
+        justify-content: space-around;
+    }
+    .map_container {
+        width: 46%;
+        height: 65%;
+    }
+    .box_social h5 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .box_messangers a {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+    .box_contact h5 {
+        font-size: 17px;
+    }
+    .box_contact span, a {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .wrapper {
+        width: 98%;
+        height: 750px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .map_container {
+        margin-top: 20px;
+        width: 80%;
+        height: 76%;
+    }
+    .contacts_container {
+        width: 65%;
+    }
+    .box_social h5 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .box_messangers {
+        width: 100%;
+        justify-content: center;
+    }
+    .box_messangers a {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+    .box_contact, .box_social {
+        text-align: center;
+        height: 23%;
+    }
+    .box_contact h5 {
+        font-size: 19px;
+    }
+    .box_contact span, a {
+        font-size: 16px;
+    }
+}
+@media (max-width: 500px) {
+    .container_header {
+        width: 90%;
+        height: 45px;
+        margin: 30px 0 30px;
+        border-left: 3px solid #00693e;
+    }
+    .container_header h3 {
+        font-size: 22px;
+    }
+    .box_contact h5 {
+        font-size: 17px;
+    }
+    .box_contact span, a {
+        font-size: 14px;
+    }
+    .map_container {
+        width: 90%;
+    }
+}
+
+
+.box_messangers a::before {
+    position: absolute;
+    display: block;
+    content: '';
+
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background-color: #fff;
+    transition: width 0.6s ease;
+}
+.box_messangers a:hover::before {
+    width: 100%;
+}
+
+.box_messangers a:hover {
+    transition: color 0.8s ease;
+}
+
+.box_messangers .telegram:hover {
+    color: #1c92d2;
+    background: #1c92d2;
+    background: linear-gradient(to right,#1c92d2,#f2fcfe)
+}
+
+.box_messangers .vkontakte:hover {
+    color: #45668e;
+    background: #45668e;
+}
+
+.box_messangers a:hover::before {
+    width: 100%;
+}
+
+@keyframes showMessangers {
+    50% {
+        transform: translate(-60%, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}

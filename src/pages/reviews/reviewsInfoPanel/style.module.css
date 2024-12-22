@@ -1,0 +1,98 @@
+.container_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 0px;
+    width: 95%;
+    height: 110px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 5;
+}
+.container_counter_reviews, .container_rating_reviews, .container_btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 15px;
+    width: 32%;
+    /* height: 100%; */
+}
+.container_counter_reviews span, .container_rating_reviews span, .container_btn span {
+    font-size: 23px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 1000px) {
+    .container_info {
+        width: 97%;
+    }
+    .container_counter_reviews span, .container_rating_reviews span, .container_btn span {
+        font-size: 21px;
+        color: #fff;
+        font-weight: 600;
+    }
+}
+@media (max-width: 900px) {
+    .container_info {
+        width: 100%;
+    }
+    .container_counter_reviews span, .container_rating_reviews, .container_btn span {
+        font-size: 17px;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 700px) {
+    .container_info {
+        /* width: 100%; */
+        justify-content: space-around;
+    }
+    .container_counter_reviews span, .container_rating_reviews span, .container_btn span {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 800;
+        margin-bottom: 0px;
+    }
+}
+@media (max-width: 650px) {
+    .container_info {
+        width: 90%;
+        /* width: 100%; */
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: 145px;
+        position: relative;
+    }
+    .container_counter_reviews , .container_rating_reviews, .container_btn {
+        width: 45%;
+        position: relative;
+    }
+    .container_counter_reviews span, .container_rating_reviews span, .container_btn span {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 800;
+    }
+}
+
+@media (max-width: 500px) {
+    .container_counter_reviews , .container_rating_reviews, .container_btn {
+        width: 45%;
+        justify-content: space-between;
+        /* flex-direction: column-reverse; */
+        position: relative;
+    }
+    .container_btn {
+        width: 70%;
+    }
+    .container_counter_reviews span, .container_rating_reviews span, .container_btn span {
+        font-size: 14px;
+        color: #fff;
+        font-weight: 600;
+    }
+}
+

@@ -1,0 +1,356 @@
+.appBar {
+    border-radius: 0 0 25px 25px;
+    padding: 0;
+}
+
+.toolBar {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 70px;
+    padding: 0 20px 0 0px;
+    z-index: 30;
+}
+.container_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+.container_logo .logo_header {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 0 0 0 25px;
+    z-index: 15;
+}
+.container_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container_title span {
+    text-align: center;
+    font-size: 12px;
+    animation-name: showSlogan;
+    animation-duration: 0.4s;
+    animation-delay: 0.2s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.container_title h1 {
+    margin-left: 10px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+    animation-name: showTitleCompany;
+    animation-delay: 0.2s;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@keyframes showTitleCompany  {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes showSlogan {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@media (max-width: 1100px) {
+    .container_logo {
+        width: 32%;
+    }
+    .container_logo h1 {
+        font-size: 16px;
+    }
+    .container_title span {
+        font-size: 10px;
+    }
+}
+@media (max-width: 900px) {
+    .container_logo {
+        width: 35%;
+    }
+    .container_logo h1 {
+        font-size: 15px;
+    }
+    .container_title span {
+        font-size: 9px;
+    }
+}
+@media (max-width: 800px) {
+    .container_logo {
+        justify-content: flex-start;
+        width: 55%;
+    }
+    .container_title {
+        margin-left: 30px;
+    }
+    .container_logo h1 {
+        font-size: 17px;
+    }
+}
+@media (max-width: 650px) {
+    .container_logo {
+        justify-content: flex-start;
+        width: 55%;
+    }
+    .container_title {
+        margin-left: 15px;
+    }
+    .container_logo h1 {
+        font-size: 16px;
+    }
+    .container_logo span {
+        font-size: 12px;
+    }
+}
+@media (max-width: 550px) {
+    .container_logo {
+        width: 60%;
+    }
+    .container_title {
+        margin-left: 10px;
+    }
+    .container_logo h1 {
+        font-size: 14px;
+    }
+    .container_logo span {
+        font-size: 10px;
+    }
+}
+@media (max-width: 500px) {
+    .container_logo {
+        width: 63%;
+    }
+    .container_title {
+        margin-left: 8px;
+    }
+    .container_logo h1 {
+        font-size: 12px;
+    }
+    .container_logo span {
+        font-size: 9px;
+    }
+}
+
+.container_menu_desc {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.link {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in;
+}
+.link:before {
+    position: absolute;
+    content: '';
+    display: none;
+    width: 120%;
+    height: 3px;
+    left: -10%;
+    bottom: -10px;
+    color: #067346;
+}
+.link:hover {
+    color: #067346;
+    transition: color 0.3s ease-in;
+}
+
+.active {
+    font-weight: 500;
+    color: #067346;
+    position: relative;
+    transition: width 0.3s ease;
+}
+
+.active::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: -50%;
+    animation-name: activeBefore;
+    animation-duration: 0.150s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    height: 2px;
+    background-color: #067346;
+}
+
+
+@media (max-width: 1100px) {
+    .link {
+        font-size: 15px;
+    }
+    .container_menu_desc {
+        width: 65%;
+        gap: 12px;
+    }
+    .active::before {
+        height: 2.5px;
+    }
+}
+@media (max-width: 950px) {
+    .link {
+        font-size: 13px;
+    }
+    .container_menu_desc {
+        width: 60%;
+        gap: 10px;
+    }
+}
+@media (max-width: 800px) {
+    .container_menu_desc {
+        display: none;
+    }
+}
+
+.btn_menu_open {
+    position: absolute;
+    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 1;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+.btn_menu_open:hover {
+    color: #00693e;
+    transition: color 0.3s ease-in;
+}
+.btn_menu_open:active {
+    color: #00693e;
+    transition: color 0.3s ease-in;
+}
+
+
+@media (max-width: 800px) {
+    .btn_menu_open {
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+.side_menu {
+    position: fixed;
+    top: 0;
+    right: -260px; /* Меню скрыто за пределами экрана */
+    width: 250px;
+    height: 100%;
+    background-color: #0c0c0c;
+    color: white;
+    transition: right 0.3s ease; /* Плавное открытие/закрытие */
+}  
+
+.side_menu.open {
+    z-index: 100;
+    right: 0; /* При открытии меню перемещаем его на экран */
+}
+
+.side_menu ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.link_mobile {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.active_mobile {
+    color: #067346;
+}
+
+.menu_btn_close {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: -20px;
+    left: 15px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+.menu_btn_close:hover {
+    color: #067346;
+    transition: color 0.3s ease-in;
+}
+.menu_btn_close:active {
+    color: #067346;
+    transition: color 0.3s ease-in;
+}
+
+
+.wrapper_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: #000;
+    transition: opacity 0.3s ease;
+
+}
+.wrapper_active {
+    opacity: 0.7;
+    z-index: 20;
+}
+
+@keyframes activeBefore {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 125%;
+    }
+}
+
+
+
+
+
+
+
+
+

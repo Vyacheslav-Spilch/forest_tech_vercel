@@ -1,0 +1,229 @@
+.container_create_review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #00693d00;
+    width: 95%;
+    height: 0px;
+    transition: all 0.3s ease;
+}
+.active {
+    height: 450px;
+    padding: 20px 0;
+    border-top: 1px solid #08603c;
+    transition: all 0.3s ease;
+}
+.container_form {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.active_form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    animation-name: showForm;
+    animation-delay: 0.2s;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.field_name, .field_review, .field_rating {
+    min-width: 50%;
+    font-size: 17px;
+    background-color: #00693d00;
+    color: #fff;
+    letter-spacing: 1.3px;
+    padding: 8px;
+    border-bottom: 1px solid #ffffff42;
+    border-radius: 5px;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+}
+
+.field_review {
+    resize: none;
+    min-height: 50px;
+    height: 90px;
+    margin: 30px 0;
+}
+
+@media (max-width: 1000px) {
+    .active_form {
+        width: 85%;
+    }
+    .field_name, .field_review, .field_rating {
+        font-size: 16px;
+        min-width: 55%;
+    }
+}
+@media (max-width: 900px) {
+    .active_form {
+        width: 85%;
+    }
+    .field_name, .field_review, .field_rating {
+        min-width: 65%;
+    }
+}
+@media (max-width: 800px) {
+    .active_form {
+        width: 80%;
+    }
+    .field_name, .field_review, .field_rating {
+        font-size: 15px;
+        min-width: 75%;
+        padding: 5px;
+    }
+}
+@media (max-width: 550px) {
+    .active_form {
+        width: 80%;
+    }
+    .field_name, .field_review, .field_rating {
+        font-size: 15px;
+        min-width: 85%;
+        padding: 5px;
+    }
+}
+@media (max-width: 450px) {
+    .active_form {
+        width: 85%;
+    }
+    .field_name, .field_review, .field_rating {
+        font-size: 14px;
+        width: 95%;
+        padding: 5px;
+    }
+}
+
+.field_rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+    height: 40px;
+    border: none;
+
+}
+.box_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-transform: uppercase; */
+    width: 100%;
+}
+.box_title span {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+@media (max-width: 1000px) {
+    .field_rating {
+        min-width: 65%;
+    }
+}
+@media (max-width: 880px) {
+    .field_rating {
+        min-width: 70%;
+    }
+    .box_title {
+        margin-right: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .field_rating {
+        flex-wrap: wrap;
+        justify-content: center;
+        min-width: 85%;
+    }
+    .box_title {
+        text-align: center;
+        margin-right: 10px;
+    }
+    .box_title span {
+        font-size: 12px;
+        font-weight: 300;
+    }
+}
+
+
+.rating {
+    height: 100%;
+    padding: 5px;
+}
+
+.container_submit_btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    min-width: 30%;
+    height: 60px;
+}
+
+@media (max-width: 700px) {
+    .container_submit_btn {
+        min-width: 80%;
+        height: 60px;
+    }
+}
+
+.modal_feedback {
+    display: none;
+    position: absolute; 
+    top: 200px;
+    height: 60px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.active_modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: showModalFeedback;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    transition: opacity 0.2s ease;
+    z-index: 100;
+}
+
+@media (max-width: 700px) {
+    .modal_feedback {
+        top: 200px;
+        height: 60px;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+}
+
+
+@keyframes showForm {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showModalFeedback {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
